@@ -55,6 +55,19 @@
       font-size:25px;
     }
   </style>
+  <script>
+var count = document.querySelector(".counter");
+var vcount = localStorage.getItem("page_view");
+
+if (vcount) {
+  vcount = Number(vcount) + 1;
+  localStorage.setItem("page_view", vcount);
+} else {
+  vcount = 1;
+  localStorage.setItem("page_view", 1);
+}
+count.innerHTML = vcount;
+  </script>
 </head>
   
 <body>
@@ -74,6 +87,7 @@
   <p>
     Hello, I am Zaineman welcome to my website.
   </p>
+    <div class="counter"></div>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/5DCm9j8jKVM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/8ZEMVB7aMZU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <script src="https://apis.google.com/js/platform.js"></script>
