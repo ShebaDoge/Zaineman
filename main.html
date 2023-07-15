@@ -57,16 +57,28 @@
   </style>
   <script>
 var count = document.querySelector(".counter");
-var vcount = localStorage.getItem("page_view");
+ var vcount = localStorage.getItem("page_view");
+ var n = localStorage.getItem('on_load_counter');
 
-if (vcount) {
-  vcount = Number(vcount) + 1;
-  localStorage.setItem("page_view", vcount);
-} else {
-  vcount = 1;
-  localStorage.setItem("page_view", 1);
-}
-count.innerHTML = vcount;
+ if (vcount) {
+   vcount = Number(vcount) + 1;
+   localStorage.setItem("page_view", vcount);
+ } else {
+   vcount = 1;
+   localStorage.setItem("page_view", 1);
+ if (n === null) {
+   n = 0;
+ }
+ count.innerHTML = vcount;
+ n++;
+
+ localStorage.setItem("on_load_counter", n);
+
+ nums = n.toString().split('').map(Number);
+ document.getElementById('counter').innerHTML = '';
+ for (var i of nums) {
+   document.getElementById('counter').innerHTML += i;
+ }
   </script>
 </head>
   
@@ -87,7 +99,7 @@ count.innerHTML = vcount;
   <p>
     Hello, I am Zaineman welcome to my website.
   </p>
-    <div class="counter"></div>
+    <div id="counter"></div>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/5DCm9j8jKVM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/8ZEMVB7aMZU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <script src="https://apis.google.com/js/platform.js"></script>
