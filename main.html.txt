@@ -1,0 +1,99 @@
+<!doctype HTML>
+<html>
+  
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaineman</title>
+  <style>
+    html,body{
+      width:100%;
+      height:100%;
+      margin:0;
+      padding:0;
+      font-family: "Lucida Console", "Courier New", monospace;
+      background-color:#f2f2f2;
+      
+      
+      
+    }
+    header{
+      
+      margin:0;
+      width:100%;
+      background-color:#c3e2e8;
+      height:200px;
+      background: linear-gradient(to top right, transparent 25%, #c3e2e8 50px);
+      text-align:center;
+      
+      font-size:5em;
+      font-style:italic;
+      font-family: "Times New Roman", Times, serif;
+    }
+    .nav{
+      position: fixed;
+      height: 20px;
+      background-color:#333333;
+      width:100%;
+      padding:0;
+    }
+    .navbutton{
+      margin:0;
+            color:white;
+      height:20px;
+      text-decoration:none;
+      background-color:#575757;
+    }
+    main{
+      width:80%;
+      margin:auto;
+    }
+    iframe{
+      margin-left:25%;
+      margin-right:25%;
+    }
+    p{
+      font-size:25px;
+    }
+  </style>
+  <script>
+var count = document.querySelector(".counter");
+var vcount = localStorage.getItem("page_view");
+
+if (vcount) {
+  vcount = Number(vcount) + 1;
+  localStorage.setItem("page_view", vcount);
+} else {
+  vcount = 1;
+  localStorage.setItem("page_view", 1);
+}
+count.innerHTML = vcount;
+  </script>
+</head>
+  
+<body>
+  <span class="nav">
+    <a class="navbutton" href="https://www.simpleplanes.com">Main</a>
+    <a class="navbutton" href="https://www.simpleplanes.com">PSM tutorials</a>
+    <a class="navbutton" href="https://www.simpleplanes.com">Videos</a>
+    <a class="navbutton" href="https://www.simpleplanes.com">SimplePlanes.com</a>
+    <a class="navbutton" href="https://www.simpleplanes.com">Credits</a>
+  </span>
+<header>
+  <span style="transform:translate(0px,50px);position:absolute;">
+  Zaine's place
+  </span>
+</header>
+  <main>
+  <p>
+    Hello, I am Zaineman welcome to my website.
+  </p>
+    <div class="counter"></div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5DCm9j8jKVM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/8ZEMVB7aMZU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <script src="https://apis.google.com/js/platform.js"></script>
+
+<div style="float:right;" class="g-ytsubscribe" data-channelid="UCv5rCxvMeO--u1QiZn854CA" data-layout="full" data-count="default"></div>
+  </main>
+</body>
+  
+</html>
