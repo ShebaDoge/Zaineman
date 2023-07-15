@@ -56,27 +56,22 @@
     }
   </style>
   <script>
-var count = document.querySelector(".counter");
-var vcount = localStorage.getItem("page_view");
+var n = localStorage.getItem('on_load_counter');
 
-if (vcount) {
-  vcount = Number(vcount) + 1;
-  localStorage.setItem("page_view", vcount);
-} else {
-  vcount = 1;
-  localStorage.setItem("page_view", 1);
+if (n === null) {
+  n = 0;
 }
-count.innerHTML = vcount;
+n++;
+
+localStorage.setItem("on_load_counter", n);
+
+nums = n.toString().split('').map(Number);
+document.getElementById('counter').innerHTML = '';
+for (var i of nums) {
+  document.getElementById('counter').innerHTML += i;
+}
+
   </script>
-</head>
-  
-<body>
-  <span class="nav">
-    <a class="navbutton" href="https://www.simpleplanes.com">Main</a>
-    <a class="navbutton" href="https://www.simpleplanes.com">PSM tutorials</a>
-    <a class="navbutton" href="https://www.simpleplanes.com">Videos</a>
-    <a class="navbutton" href="https://www.simpleplanes.com">SimplePlanes.com</a>
-    <a class="navbutton" href="https://www.simpleplanes.com">Credits</a>
   </span>
 <header>
   <span style="transform:translate(0px,50px);position:absolute;">
@@ -87,7 +82,7 @@ count.innerHTML = vcount;
   <p>
     Hello, I am Zaineman welcome to my website.
   </p>
-    <div class="counter"></div>
+    <div id="counter">0</div>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/5DCm9j8jKVM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/8ZEMVB7aMZU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <script src="https://apis.google.com/js/platform.js"></script>
