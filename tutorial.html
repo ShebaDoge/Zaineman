@@ -92,10 +92,16 @@
       How to make canards:
     </p>
     <p>
-      Start off with a small rotor. Set <code>DisableBaseMesh</code> to <code>true</code> (optional w XML editor). turn the <code>speed</code> to 100% and change the input to <code>TAS &gt; 20 ? (AngleOfAttack/35)-(Pitch/2) : 0</code>
+      Start off with a small rotator. Set <code>DisableBaseMesh</code> to <code>true</code> (optional w XML editor). turn the <code>speed</code> to 100% and change the input to <code>TAS &gt; 20 ? (AngleOfAttack/35)-(Pitch/2) : 0</code> 
     </p>
-    
-
+    <p class="sub">
+      How to make single-engine thrust vectoring:
+    </p>
+    <p>Start off with a hinge rotator. Duplicate it and place it horizontally of the first one. Move the engine away and place the hinges. Put the engine back on. On both of them set the speed to 100% and the range of motion to 20&deg;. Change the front hinge input to pitch. Change the back hinge input to Yaw without invert. Somtimes the angle may vary depending on weight and size. you can turn part cliping off and move them back together</p>
+    <p class="sub">
+      How to make twin-engine thrust vectoring:
+    </p>
+    <p>copy the same process as before except only change the the left front rotators input to <code>Pitch-Roll</code> and the right front rotators to <code>Pitch+Roll</code>. you might have to switch the lines of core and or invert them for it to work.</p>
 
   </main>
   <footer>
